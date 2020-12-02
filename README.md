@@ -26,6 +26,6 @@ Entretanto as activitys possuem suas particularidades. Geramente, as activitys s
 
 
 # Resumo das aulas
-## Aula 1 - *ListaDeAlunos*
+## Aula 1
 Durante a primeira aula foi criado uma activity vazia para o projeto. Onde a mesma foi registrada e definida como uma activity principal. 
 Dado isso, será executada e exibida assim que o programa for aberto.
