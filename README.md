@@ -1,5 +1,5 @@
 # Curso de Android
-Esse repositório é destinado para o curso introdutório ao desenvolvimento de aplicações móveis android, utilizando a IDE Android Studio.
+Esse repositório é destinado para o curso introdutório para desenvolvimento de aplicações móveis em android, utilizando a IDE Android Studio.
 
 ## 1. Primeiros Passos
 1. Baixar a versão deseja do [Android Studio](https://developer.android.com/studio/archive)
