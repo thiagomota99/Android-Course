@@ -1,5 +1,5 @@
 # Curso de Android
-Esse repositório é destinado para o curso introdutório para desenvolvimento de aplicações móveis em android, utilizando a IDE Android Studio.
+Esse repositório é destinado para o curso introdutório para desenvolvimento de aplicações móveis em android, utilizando a IDE Android Studio **3.2.1**.
 
 ## Primeiros Passos
 1. Baixar a versão deseja do [Android Studio](https://developer.android.com/studio/archive)
@@ -47,8 +47,8 @@ para a Activity. **Toast** que tem como objetivo mostrar uma mensagem para o usu
 
 ## Aula 3
 Durante a aula três foi abordado a criação e a configuração de views para as activities. Onde foi primeiro utilizado o código java para</br>
-a criação da view e chamada da mesma. Entretanto, não é a melhor solução, pois podemos além de ser trabalhoso, acaba deixando o código muito mais complexo de entendimento.</br>
-Não conseguindo diferenciar o que é views ou lógica da activity. Por isso criamos arquivos estáticos de layout para a criação de views de forma mais intuitiva e respeitando</br>
+a criação da view e chamada da mesma. Entretanto, não é a melhor solução, pois além de ser trabalhoso implementar via java algumas views, acaba deixando o código muito mais complexo de entendimento.</br>
+Não conseguindo diferenciar o que é views ou lógica da activity. Por isso criamos arquivos estáticos de layout para a criação de views de forma mais intuitiva e respeitando
 as boas práticas.
 
 ### Criando um layout
