@@ -38,3 +38,8 @@ Ex: `public class MainActivity extends Activity`
             </intent-filter>
         </activity>
       </application>`
+      
+## Aula 2
+Durante a aula dois foi abordado o **Ciclo de Vida do Android** que é dado inicialmente pelo método `onCreate()`.</br> 
+O mesmo é responsável por executar os comportamentos da activity. Após a crição do método, foi adicionado um novo comportamento</br>
+para a Activity. **Toast** que tem como objetivo mostrar uma mensagem para usuário por um determinado tempo.
