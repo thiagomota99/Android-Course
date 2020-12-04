@@ -169,8 +169,65 @@ android em versões antigas com a extensão dessa classe em nossas Activities.
 2. Criar duas Activities: ListaDeAlunosActivity e NovoAlunoActivity
 3. Adicionar a Activity ListaDeAlunos uma ListView e FloatingActionButton
 4. Adicionar a Activity NovoAluno 3 EditText e 1 Button
-5.
+5. Pegar os valores dos campos de EditText
+6. Criar evento do Button
 
+Para capturar eventos de nossas views devemos utlizar para nossas views utilizamos o Listerners que são interfaces</br>
+para capturar o evento de alguma view. No caso, o click do botão.</br>
+Ex:
+```Java
+        //Primeiro pegamos a referência do botão.
+        Button btnSalvar = findViewById(R.id.activity_novo_aluno_botao_salvar);
+
+        //Pegando as referências dos campos nome,telefone e email da view EditText
+        final EditText campoNome = findViewById(R.id.activity_novo_aluno_campo_nome);
+        final EditText campoTelefone = findViewById(R.id.activity_novo_aluno_campo_telefone);
+        final EditText campoEmail = findViewById(R.id.activity_novo_aluno_campo_email);
+
+        /*Iremos utilizar o método setOnclickListener para capturar o evento de click no botão
+          iremos relizar a implementação da classe que é uma interface de todos os componentes que herdam de View
+        */
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Pegando os valores dos campos e atribuindo as variáveis locais
+                String nome = campoNome.getText().toString();
+                String telefone = campoTelefone.getText().toString();
+                String email = campoEmail.getText().toString();
+            }
+        });
+````
+
+7. Criar diretório e uma classe de modelo chamada Aluno para receber os valores das variáveis: nome, telefone e email
+```Java
+public class Aluno {
+    private final String nome;
+    private final String telefone;
+    private final String email;
+
+    public Aluno(String nome, String telefone, String email) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+    }
+
+}
+```
+8. Criar diretório para uma classe de DAO chamada AlunoDAO para relizar ações de "persitência" de dados, como os métodos salvar e listar.
+```Java
+public class AlunoDAO {
+    private final static List<Aluno> alunos = new ArrayList<>();
+
+    public void salvar(Aluno aluno) {
+        alunos.add(aluno);
+    }
+
+    public List<Aluno> todos() {
+
+        return new ArrayList<>(alunos);
+    }
+}
+```
 
 
 
