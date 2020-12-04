@@ -154,6 +154,13 @@ Outros atributos...</br>
 
 ***
 
+## Aula 6 - Imagens e AppCompatActivity
+Foi abordado durante a adição de ícones ao projeto. Para implementa-los dentro de views como o FloatingActionButton, desta forma dar mais sentido quanto as ações que um view realiza.</br>
+Já o AppComatActivity é uma classe que extende de Activity, entretanto da suporte para versões do android mais antigas. Ou seja, podemos utilizar features de versões mais recentes do</br>
+android em versões antigas com a extensão dessa classe em nossas Activities.
+
+***
+
 
 
 
