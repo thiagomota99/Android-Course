@@ -69,7 +69,7 @@ Tendo isso em mente basta referencia-la.
 * App bar com título Lista de Alunos;</br>
    `setTitle("Lista de Alunos")`</br>
 * Lista de alunos - ListView;</br>
-   Procure por **ListView** na paleta de componentes</br>
+   Procure por **ListView** na paleta de componentes adcione ela ao layout, e altere seu id</br>
     ```Java
         /*Settando o título da App Bar*/
         setTitle("Lista de Alunos");
@@ -93,12 +93,19 @@ Tendo isso em mente basta referencia-la.
         listaViewAlunos.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaAlunos));
 
     ```
-    **Obs:** AdapterViews são tipos de Views que possum a possibilidade de exibir dados de forma dinâmica. Como</br>
-             exemplo a ListView. Podemos incrementa-la conforme a nossa necessidade, sem definir um número fixo</br>
-             de elementos para serem exibidos.
-</br>
+    **AdapterViews**: São tipos de Views que possum a possibilidade de exibir dados de forma dinâmica. Como</br>
+                      exemplo a ListView. Podemos incrementa-la conforme a nossa necessidade, sem definir um número fixo</br>
+                      de elementos para serem exibidos.</br>
+
 * Botão para adicionar novo aluno;</br>
-    Procure por **FloatingActionButton** na paleta de componentes
+    Procure por **FloatingActionButton** na paleta de componentes. Adicione a biblioteca do FloatingActionButton, caso necessário.</br>
+    Converta o tipo de Layout de **LinearLayout** para **RelativeLayout**</br>
+
+    **ViewGroups** São views que geralmente tem como objetivo serem os elementos raízes para organizar outras views dentro da mesma.</br>
+                   O RelativeLayout, LinearLayout são exemplos disso. Entretanto, a forma como organizam os elementos irá variar.</br>
+                   Enquanto o Linear, orienta suas views filhas de forma linear e vertical (uma embaixo da outra) a Relative aborda uma</br>
+                   estrutura de sobreposição de elementos, dando mais liberdade de movimentaçãa quanto a posição das views no layout.
+</br>
 
 
 
