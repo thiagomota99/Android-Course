@@ -112,6 +112,8 @@ Tendo isso em mente basta referencia-la.
                    estrutura de sobreposição de elementos, dando mais liberdade de movimentaçãa quanto a posição das views no layout.
 ***
 
+## Aula 5 - Código Fonte do Layout
+<p style="margin-left: 8dp;">Vamos colocar </p> 
 
 
 
