@@ -113,11 +113,46 @@ Tendo isso em mente basta referencia-la.
 ***
 
 ## Aula 5 - Código Fonte do Layout
-<p style="margin-left: 40px;">Vamos colocar </p> 
+O Layout possui uma abar para mexermos diretamente com código fonte das Views. É necessário o conhecimento do source das views, até mesmo</br>
+para alterar algumas propriedades de forma mais personalizada. Veja um exemplo logo abaixo:</br>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true" />
 
+    <ListView
+        android:id="@+id/activity_main_lista_de_alunos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
+```
+</br>Algumas propriedades de Views são obrigatórias como a `android:layout_width="match_parent"` e `android:layout_height="match_parent">`</br>
+Dado isso elas possuem alguns valores que podem ser atribuídos como *match_parent* e i *wrap_content*</br>
 
+* **match_parent**: Terá como referência a largura ou altura do elemento "pai" daquela view.
+* **wrap_content**: Terá como referência a largura e altura do conteúdo interno. Ou seja, se ajustará conforme o tamanho do conteúdo.</br>
 
+Outros atributos...</br>
+* `android:layout_marginEnd="25dp"`: Define a margem final de uma view em relação ao elemento pai.
+* `android:layout_marginBottom="20dp"`: Define a margem inferior de uma view em relação ao elemento pai.</br>
+
+**OBS**</br>
+    Normalmente utilizamos a unidade de medidade "dp" para atribuirmos as nossas views. Pois a mesma tem como objetivo manter o mesmo aspecto visual, em diferentes dispositivos.</br>
+    Para que em dispostivos com displays menores ou maiores o layout não sofra grandes distorções.
+
+***
 
 
 
