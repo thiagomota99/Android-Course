@@ -7,7 +7,7 @@
     tools:context=".ui.activity.ListaAlunosActivity">
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/activity_lista_alunos_novo_aluno_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -17,6 +17,7 @@
         android:src="@drawable/ic_adicionar_novo_aluno" />
 
     <ListView
+        android:id="@+id/activity_lista_de_alunos_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>
