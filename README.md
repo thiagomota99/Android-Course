@@ -113,7 +113,7 @@ Tendo isso em mente basta referencia-la.
 ***
 
 ## Aula 5 - Código Fonte do Layout
-<p style="margin-left: 8dp;">Vamos colocar </p> 
+<p style="margin-left: 40px;">Vamos colocar </p> 
 
 
 
