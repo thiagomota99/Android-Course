@@ -164,11 +164,12 @@ android em versões antigas com a extensão dessa classe em nossas Activities.
 ## Aula 6 - Projeto Final
 
 
-###Passos a serem realizados
+### Passos a serem realizados
 1. Criar um projeto Android
 2. Criar duas Activities: ListaDeAlunosActivity e NovoAlunoActivity
 3. Adicionar a Activity ListaDeAlunos uma ListView e FloatingActionButton
 4. Adicionar a Activity NovoAluno 3 EditText e 1 Button
+5.
 
 
 
