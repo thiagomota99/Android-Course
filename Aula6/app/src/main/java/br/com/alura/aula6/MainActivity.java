@@ -2,6 +2,7 @@ package br.com.alura.aula6;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class MainActivity extends Activity {
 
         //Settando um layout estático para a Activity.
         setContentView(R.layout.activity_main);
+
+        setTitle("Aula 6");
 
         //Criando uma lista de alunos
         List<String> listaAlunos = new ArrayList<>(Arrays.asList("Maria","Thiago","Francivaldo"));
