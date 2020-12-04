@@ -24,7 +24,7 @@ Entretanto as activities possuem suas particularidades. Geramente, as activities
 Ex: `public class MainActivity extends Activity`
  
  - No arquivo *AndroidManifest.xml* é feito o registro da activity, categorizando como principal e lançando a mesma.<br/>
-  ```xml    
+ ```xml
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,7 +39,8 @@ Ex: `public class MainActivity extends Activity`
             </intent-filter>
         </activity>
     </application>
-    ```
+```
+
 ***
 
 ## Aula 2
