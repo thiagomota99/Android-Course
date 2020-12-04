@@ -24,7 +24,8 @@ Entretanto as activities possuem suas particularidades. Geramente, as activities
 Ex: `public class MainActivity extends Activity`
  
  - No arquivo *AndroidManifest.xml* é feito o registro da activity, categorizando como principal e lançando a mesma.<br/>
-  `    <application
+  ```xml    
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -37,13 +38,16 @@ Ex: `public class MainActivity extends Activity`
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-      </application>`
-      
+    </application>
+    ```
+***
+
 ## Aula 2
 Durante a aula dois foi abordado o **Ciclo de Vida do Android** que é dado inicialmente pelo método `onCreate()`.</br> 
 O mesmo é responsável por executar os comportamentos da activity. Após a crição do método, foi adicionado um novo comportamento</br>
 para a Activity. **Toast** que tem como objetivo mostrar uma mensagem para o usuário por um determinado período de tempo.</br></br>
 
+***
 
 ## Aula 3
 Durante a aula três foi abordado a criação e a configuração de views para as activities. Onde foi primeiro utilizado o código java para</br>
@@ -105,7 +109,9 @@ Tendo isso em mente basta referencia-la.
                    O RelativeLayout, LinearLayout são exemplos disso. Entretanto, a forma como organizam os elementos irá variar.</br>
                    Enquanto o Linear, orienta suas views filhas de forma linear e vertical (uma embaixo da outra) a Relative aborda uma</br>
                    estrutura de sobreposição de elementos, dando mais liberdade de movimentaçãa quanto a posição das views no layout.
-</br>
+***
+
+
 
 
 
