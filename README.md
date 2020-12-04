@@ -194,6 +194,12 @@ Ex:
                 String nome = campoNome.getText().toString();
                 String telefone = campoTelefone.getText().toString();
                 String email = campoEmail.getText().toString();
+
+                Aluno alunoCriado = new Aluno(nome,telefone,email);
+                alunoDAO.salvar(alunoCriado);
+
+                //Inializnado outra activity
+                startActivity(new Intent(NovoAlunoActivity.this, ListaAlunosActivity.class));
             }
         });
 ````
@@ -227,7 +233,7 @@ public class AlunoDAO {
         return new ArrayList<>(alunos);
     }
 }
-```
+``` 
 
 
 
