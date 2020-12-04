@@ -52,11 +52,11 @@ Não conseguindo diferenciar o que é views ou lógica da activity. Por isso cri
 as boas práticas.
 
 ### Criando um layout
- * Na diretório res aperte combinadamente Alt+Insert e procure por **Android Resource Directory**
+ * No diretório res aperte combinadamente Alt+Insert e procure por **Android Resource Directory**
     * **Directory Name**: layout
     * **Resource type**: layout
     * **Source set**: main
- * Na diretório res aperte combinadamente Alt+Insert e procure por **Android Resource File**
+ * No diretório res aperte combinadamente Alt+Insert e procure por **Android Resource File**
     * **File name**: activity_nomedasuaActivity
 </br>
 
@@ -64,3 +64,48 @@ Dado isso, podemos utilizar vários componentes para compor nossa View de forma 
 Ex: `setContentView(R.layout.activity_main);`</br>
 Dessa forma estamos utilizando a Classe **"R"** que tem como objetivo acessar todos os diretórios de resources do projeto, inclusive a **"layout"** que foi criado.</br>
 Tendo isso em mente basta referencia-la.
+
+### Implementando Layout Proposto - Lista de Alunos
+* App bar com título Lista de Alunos;</br>
+   `setTitle("Lista de Alunos")`</br>
+* Lista de alunos - ListView;</br>
+   Procure por **ListView** na paleta de componentes</br>
+    ```Java
+        /*Settando o título da App Bar*/
+        setTitle("Lista de Alunos");
+
+        /*Criando uma lista de Strings com três índices*/
+        List<String> listaAlunos = new ArrayList<>(Arrays.asList("Maria","Thiago","Francivaldo"));
+
+        /*findViewById() é o método que nos permite acessar a classe R e pegar o id da view ListView que criamos*/
+        ListView listaViewAlunos = findViewById(R.id.activity_main_lista_de_alunos);
+        
+
+        /*Como a ListView não possui um método add para adicionarmos e exibir a lista que criamos
+          utilizamos o setAdapter. Ele é um intermediário utilizado para pegar os dados da lista
+          e redenriza-los em uma view desejada, no caso a ListView. Para isso, ele espera como parâmetro a
+          implementação de uma interface do tipo ListAdapter.
+          Usaremos o ArrayAdapter que é um dos adapters mais comuns para a exibição
+          de uma simples lista. A sobrecarga utulizada espera 3 argumentos, sendo o primeiro
+          o contexto que será nossa activity, um resource de layout que possua apenas uma view do tipo TextView
+          e por fim, nossa lista de elementos que desejamos exibir na ListView.
+        */
+        listaViewAlunos.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaAlunos));
+
+    ```
+    **Obs:** AdapterViews são tipos de Views que possum a possibilidade de exibir dados de forma dinâmica. Como</br>
+             exemplo a ListView. Podemos incrementa-la conforme a nossa necessidade, sem definir um número fixo</br>
+             de elementos para serem exibidos.
+</br>
+* Botão para adicionar novo aluno;</br>
+    Procure por **FloatingActionButton** na paleta de componentes
+
+
+
+
+
+
+
+
+
+
