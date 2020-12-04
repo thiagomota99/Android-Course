@@ -15,6 +15,6 @@ public class NovoAlunoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_novo_aluno);
 
         Button btnSalvar = findViewById(R.id.activity_novo_aluno_botao_salvar);
-        
+
     }
 }
