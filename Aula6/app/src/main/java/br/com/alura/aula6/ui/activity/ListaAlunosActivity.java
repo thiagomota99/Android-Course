@@ -11,7 +11,7 @@ import android.widget.ListView;
 import br.com.alura.aula6.R;
 import br.com.alura.aula6.dao.AlunoDAO;
 
-public class ListaAlunosActivity extends AppCompatActivity {
+public class ListaAlunosActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TITULO_APPBAR = "Lista de Alunos";
     private AlunoDAO alunoDAO = new AlunoDAO();
@@ -25,21 +25,14 @@ public class ListaAlunosActivity extends AppCompatActivity {
         setTitle(TITULO_APPBAR);
         configuraFabNovoAluno();
 
-
     }
 
     private void configuraFabNovoAluno() {
         //Pegando referência da View FloatingActionButton
         FloatingActionButton botaoNovoAluno = findViewById(R.id.activity_lista_alunos_novo_aluno_fab);
 
-        //Setando o método de onclick do listener
-        botaoNovoAluno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Chamando nova activity
-                abriFormularioAlunoActivity();
-            }
-        });
+        //Implementando a interface OnClickListener
+        botaoNovoAluno.setOnClickListener(this);
     }
 
     private void abriFormularioAlunoActivity() {
@@ -60,5 +53,12 @@ public class ListaAlunosActivity extends AppCompatActivity {
 
         //setando o adpater da view para exibição dos dados na lista.
         listView.setAdapter(new ArrayAdapter(this,android.R.layout.simple_list_item_1,alunoDAO.todos()));
+    }
+
+
+    //onClick do botão flutuante Adicionar Novo Aluno
+    @Override
+    public void onClick(View v) {
+        abriFormularioAlunoActivity();
     }
 }

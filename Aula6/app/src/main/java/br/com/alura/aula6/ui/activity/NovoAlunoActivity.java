@@ -13,7 +13,7 @@ import br.com.alura.aula6.R;
 import br.com.alura.aula6.dao.AlunoDAO;
 import br.com.alura.aula6.model.Aluno;
 
-public class NovoAlunoActivity extends AppCompatActivity {
+public class NovoAlunoActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TITULO_APPBAR = "Novo Aluno";
     private EditText campoNome;
@@ -34,16 +34,10 @@ public class NovoAlunoActivity extends AppCompatActivity {
     //Configuração do botão Salvar
     private void configuraBotaoSalvar() {
         Button btnSalvar = findViewById(R.id.activity_novo_aluno_botao_salvar);
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Aluno alunoCriado = criaAluno();
-                salva(alunoCriado);
-            }
-        });
+        btnSalvar.setOnClickListener(this);
     }
 
-    //Inicializr atributos
+    //Inicializar atributos
     private void inicializacaoDosCampos() {
         campoNome = findViewById(R.id.activity_novo_aluno_campo_nome);
         campoTelefone = findViewById(R.id.activity_novo_aluno_campo_telefone);
@@ -66,5 +60,12 @@ public class NovoAlunoActivity extends AppCompatActivity {
         String email = campoEmail.getText().toString();
 
         return new Aluno(nome,telefone,email);
+    }
+
+    //onClick do botão "SALVAR"
+    @Override
+    public void onClick(View v) {
+        Aluno alunoCriado = criaAluno();
+        salva(alunoCriado);
     }
 }
