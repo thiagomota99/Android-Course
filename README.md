@@ -233,7 +233,14 @@ public class AlunoDAO {
         return new ArrayList<>(alunos);
     }
 }
-``` 
+```
+</br></br>
+
+
+# CRUD - LISTA DE ALAUNOS.
+Está parte do projeto tem como intuito a criação de um crud para o app Lista de Alunos.</br>
+Desta forma, iremos criar uma maneira de Criar, carregar, alterar e deletar os dados.</br>
+Para que isso funcione, iremos utilizar novos [**Listeners de Evento**](https://developer.android.com/guide/topics/ui/ui-events?hl=pt-br)</br>
 
 
 
