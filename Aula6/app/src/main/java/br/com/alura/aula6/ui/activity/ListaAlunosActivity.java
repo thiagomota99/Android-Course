@@ -126,7 +126,7 @@ public class ListaAlunosActivity extends AppCompatActivity implements View.OnCli
         listView = findViewById(R.id.activity_lista_de_alunos_listview);
 
         //setando o adpater da view para exibição dos dados na lista.
-        adapter = new MyAdpter(alunoDAO.todos(),this);
+        adapter = new MyAdpter(this);
         listView.setAdapter(adapter);
 
         //Implementando a interface OnItemClickListener da classe AdapterView
@@ -159,10 +159,4 @@ public class ListaAlunosActivity extends AppCompatActivity implements View.OnCli
         startActivity(vaiParaActivityNovoAluno);
     }
 
-    /*public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        Aluno alunoEscolhido = (Aluno) parent.getItemAtPosition(position);
-        alunoDAO.remove(alunoEscolhido);
-        adapter.remove(alunoEscolhido);
-        return false;
-    }*/
 }
