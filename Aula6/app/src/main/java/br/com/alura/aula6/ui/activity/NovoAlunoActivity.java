@@ -19,7 +19,7 @@ import br.com.alura.aula6.model.Aluno;
 
 import static br.com.alura.aula6.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 
-public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnClickListener*/ {
+public class NovoAlunoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TITULO_APPBAR = "Novo Aluno";
     private static final String TITULO_APPBAR_EDITA_ALUNO = "Editar Aluno";
@@ -28,7 +28,7 @@ public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnCli
     private EditText campoEmail;
     private boolean edita = true;
     final AlunoDAO alunoDAO = new AlunoDAO();
-    private Aluno aluno;
+    private Aluno aluno = new Aluno();
 
 
     @Override
@@ -37,7 +37,7 @@ public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnCli
         setContentView(R.layout.activity_novo_aluno);
 
         inicializacaoDosCampos();
-        //configuraBotaoSalvar();
+        configuraBotaoSalvar();
 
         Intent dados = getIntent();
         if(dados.hasExtra(CHAVE_ALUNO)){
@@ -56,13 +56,18 @@ public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnCli
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        //Método utilizado para inflar o xml. Ou seja, estará percorrendo item a item do xml passado por parâmetro
+        //os criando.
         getMenuInflater().inflate(R.menu.activity_formulario_novo_aluno,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
+        int itemId = item.getItemId(); // Pega o id do item do menu.
+
+        //Verifica se o Id do item do menu é correspondente ao id do item no arquivo estático (xml)
         if(itemId == R.id.activity_formulario_novo_aluno_salvar){
             preenchaAluno();
             definirAcao(edita);
@@ -72,10 +77,10 @@ public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnCli
     }
 
     //Configuração do botão Salvar
-    /*private void configuraBotaoSalvar() {
+    private void configuraBotaoSalvar() {
         Button btnSalvar = findViewById(R.id.activity_novo_aluno_botao_salvar);
         btnSalvar.setOnClickListener(this);
-    }*/
+    }
 
     //Inicializar atributos
     private void inicializacaoDosCampos() {
@@ -97,11 +102,11 @@ public class NovoAlunoActivity extends AppCompatActivity /*implements View.OnCli
     }
 
     //onClick do botão "SALVAR"
-    /*@Override
+    @Override
     public void onClick(View v) {
         preenchaAluno();
         definirAcao(edita);
-    }*/
+    }
 
     private void definirAcao(boolean acao){
         if(acao){
