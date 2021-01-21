@@ -240,7 +240,76 @@ public class AlunoDAO {
 # CRUD - LISTA DE ALAUNOS.
 Está parte do projeto tem como intuito a criação de um crud para o app Lista de Alunos.</br>
 Desta forma, estaremos implementando uma maneira de Criar(C), carregar(R), alterar(U) e deletar(D) os dados.</br>
-Para que isso funcione, iremos utilizar novos [**Listeners de Evento**](https://developer.android.com/guide/topics/ui/ui-events?hl=pt-br)</br>
+Para que isso funcione, iremos utilizar novos [**Listeners de Evento**](https://developer.android.com/guide/topics/ui/ui-events?hl=pt-br)</br></br>
+
+## Criar (C)
+Primeiramente foi criado uma activity com o nome de **NovoAlunoActivity** que tem como objetivo implementar a lógica das views por ela controladas.</br>
+Foram utilizados 4 views, sendo elas:
+* LinearLayout : Organização das views filhas (TextView, Button)
+* TextView : Campos para preenchimento de campo
+* Button : Criação de botões para o disparo de eventos
+* ScrollView : View utilizada para implementar barra de rolagem.
+
+<br>
+
+Foi criado um arquivo estático(xml) para implementar as views
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/activity_novo_aluno_campo_nome"
+            android:hint="Nome"
+            android:layout_margin="8dp"
+            android:inputType="textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/activity_novo_aluno_campo_telefone"
+            android:hint="Telefone"
+            android:layout_margin="8dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/activity_novo_aluno_campo_email"
+            android:hint="E-mail"
+            android:layout_margin="8dp"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/activity_novo_aluno_botao_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Salvar"/>
+
+    </LinearLayout>
+</ScrollView>
+```
+
+Para a implementação da activity foram utilizados os métodos:
+* onCreate() : Método do ciclo de vida do android. Executado assim que a activity é criada.
+* onCreateOptionsMenu() : Método responsável por criar os itens do menu na appbar do aplicativo. O mesmo será executado automaticamente pelo android, no momento da criação da activity.
+* onOptionsItemSelected() : Método responsável por capturar o click sobre o item do menu
+* configuraBotaoSalvar() : Método responsável por inicializar o listener de evento do botão "Salvar".
+* inicializacaoDosCampos() : Método responsável por inicializar os campos TextView
+* preenchaAluno() : Método responsável por setar os valores dos campos no objeto.
+* onClick() : Método responsável por capturar o cick do botão "Salvar" e executar seu comportamento.
+* definirAcao() Método responsável por definir qual tipo de ação será realizado criação/edição e finalização/destruição da activity.
+
 
 
 
